@@ -1,0 +1,11 @@
+Loading Document Categorizer model ... done (0,040s)
+
+
+Average: 21344,4 doc/s 
+Total: 3842 doc
+Runtime: 0.18s
+
+Accuracy: 0.9005467326217131
+Number of documents: 3841
+Execution time: 0,322 seconds
+
