@@ -1,5 +1,11 @@
-Eksperimen 1
-- dengan menggunakan crawling data twitter dengan keyword "pemerintah"
-- Dibuat 100 training data dengan 3 label Positif, Negatif dan Netral
-- Model dihasilkan menggunakan 100 training data tersebut
-- Hasil training membuktikan masih banyak kesalahan labeling
+## Eksperimen 2
+- dengan menggunakan crawling data twitter dengan keyword "komnas HAM"
+- Menghasilkan dataset dengan 885 sentences
+- Penandaan kata positive, negative dan negation pada tiap sentence
+- Penentuan sentimen positive, negative, mixed dan neutral berdasarkan kata yang ditandai
+- Menghasilkan data training
+-- Mixed: 45
+-- Positive: 229
+-- Negative: 215
+-- Neutral: 439
+- Hasil evaluasi menghasilkan akurasi 0.9101251422070534
