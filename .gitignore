@@ -3,5 +3,5 @@ opennlp
 web-app/bower_components/*
 web-app/node_modules/*
 opennlp-solr-plugin/target/*
-docs/*/dataset/**.json
-docs/*/dataset/**.jsonl
+docs/**/dataset/*.json
+docs/**/dataset/*.jsonl
