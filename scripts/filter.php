@@ -13,18 +13,18 @@ while (($tweet = fgets($finput)) !== false) {
             'full_text' => $obj->full_text,
             'user_id' => $obj->user->id,
             'user_name' => $obj->user->name,
-            'retweeeted' => $obj->retweeted,
-            'favorite_count' => $obj->favorite_count,
+            //'retweeeted' => $obj->retweeted,
+            //'favorite_count' => $obj->favorite_count,
             'created_at' => $obj->created_at,
-            'geo' => $obj->geo,
+            //'geo' => $obj->geo,
             'source' => $obj->source,
-            'user_mentions' => []
+            //'user_mentions' => []
         ];
-        if ($obj->entities->user_mentions != []) {
+        /* if ($obj->entities->user_mentions != []) {
             foreach ($obj->entities->user_mentions as $mention) {
                 $tweets[$i]['user_mentions'][] = $mention->name;
             }
-        }
+        } */
         $i++;
     }
 }

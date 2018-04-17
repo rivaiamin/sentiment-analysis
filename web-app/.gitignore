@@ -1,3 +1,6 @@
+.archive/*
 images/*
 img/*
 plugins/*
+node_modules/*
+bower_components/*

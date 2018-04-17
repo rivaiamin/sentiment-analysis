@@ -1,0 +1,44 @@
+<div class="ui equal width left aligned padded grid stackable">
+  <div class="row">
+    <div class="sixteen wide column">
+      <div class="ui segment">
+        <form id="sentimentForm" name="sentimentForm" class="ui form" ng-submit="search()">
+          <div class="ui action input">
+            <input type="text" placeholder="Search..." ng-model="keyword">
+            <select id="sentimentFilter" class="ui dropdown">
+              <option selected value="*">All</option>
+              <option value="00">Neutral</option>
+              <option value="10">Positive</option>
+              <option value="01">Negative</option>
+              <option value="11">Mixed</option>
+            </select>
+            <button type="submit" class="ui button">Search</button>
+          </div>
+        </form>
+      </div>
+      <div ng-class="{'active':scrollBusy}" class="ui inverted dimmer">
+        <div class="ui text loader">Loading</div>
+      </div>
+      <table class="ui red table" infinite-scroll='load()' infinite-scroll-distance='1' infinite-scroll-disabled='scrollBusy || scrollLast'>
+        <thead>
+        <tr>
+          <th>No</th>
+          <th>Sentiment</th>
+          <th>Full Text</th>
+          <th>
+
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="doc in docs">
+          <td>{{ $index+1 }}</td>
+          <td><a href="" class="ui {{sentimentColor(doc.sentiment)}} label"> {{ sentimentLabel(doc.sentiment) }}</a></td>
+          <td>{{ doc.full_text }}</td>
+          <td><a href="#" class="ui icon button"><i class="remove icon"></i></a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

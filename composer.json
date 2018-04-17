@@ -1,5 +1,6 @@
 {
     "require": {
-        "sastrawi/sastrawi": "^1.2"
+        "sastrawi/sastrawi": "^1.2",
+        "mikecao/flight": "^1.3"
     }
 }

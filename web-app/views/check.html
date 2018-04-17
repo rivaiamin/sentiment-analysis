@@ -1,0 +1,28 @@
+<div class="ui equal width left aligned padded grid stackable">
+  <div class="row">
+    <div class="sixteen wide column">
+      <div class="ui segment">
+        <form id="checkForm" name="checkForm" class="ui form" ng-submit="check()"></form>
+          <div class="field">
+            <label>Full Text</label>
+            <textarea ng-model="full_text" rows="3"></textarea>
+          </div>
+          <div class="field">
+            <button type="submit" class="ui primary button">Analyze</button>
+          </div>
+        </form>
+      </div>
+      <div ng-class="{'active':onLoad}" class="ui inverted dimmer">
+        <div class="ui text loader">Loading</div>
+      </div>
+      <div ng-if="sentiment.label != null" class="ui {{ sentimentColor(sentiment.code) }} icon message">
+        <i class="inbox {{ sentimentIcon(sentiment.code) }} icon"></i>
+        <div class="content">
+          <div class="header">
+            {{ sentimentLabel(sentiment.code) }} Sentiment
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="ui equal width left aligned padded grid stackable">
+  <div class="row">
+    <div class="sixteen wide column">
+      <div class="ui segment">
+        <form id="preprocessForm" name="preprocessForm" class="ui form" ng-submit="preprocess()">
+          <div class="ui fluid action input">
+            <input type="text" placeholder="Text" ng-model="full_text">
+            <button type="submit" class="ui primary button">Preprocess</button>
+          </div>
+        </form>
+      </div>
+      <div ng-class="{'active':onLoad}" class="ui inverted dimmer">
+        <div class="ui text loader">Loading</div>
+      </div>
+      <table class="ui table">
+        <thead>
+          <tr>
+            <th> </th>
+            <th>Tokenize</th>
+            <th>Lower Case</th>
+            <th>Stop Word</th>
+            <th>Stemming</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="result in results">
+            <td>{{ $index+1 }}</td>
+            <td>{{ result.tokenize }}</td>
+            <td>{{ result.lowercase }}</td>
+            <td>{{ result.stopfilter }}</td>
+            <td>{{ result.stem }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

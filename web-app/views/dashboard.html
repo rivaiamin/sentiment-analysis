@@ -1,0 +1,122 @@
+<div class="ui equal width left aligned padded grid stackable">
+  <div class="row">
+    <div class="eight wide tablet four wide computer column">
+      <div class="ui horizontal segments">
+        <div class="ui inverted teal segment center aligned">
+          <div class="ui inverted  statistic">
+            <div class="value">
+              3,952
+            </div>
+            <div class="label">
+              Indexed Data
+            </div>
+          </div>
+        </div>
+        <div class="ui inverted teal tertiary segment center aligned">
+          <div id="sparkline1">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="eight wide tablet four wide computer column">
+      <div class="ui horizontal segments">
+        <div class="ui inverted red segment center aligned">
+
+          <div class="ui inverted statistic">
+            <div class="value">
+              90,1%
+            </div>
+            <div class="label">
+              Model Precission
+            </div>
+          </div>
+        </div>
+        <div class="ui inverted red tertiary segment center aligned">
+          <div id="sparkline2">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="eight wide tablet four wide computer column">
+      <div class="ui horizontal segments">
+        <div class="ui inverted blue segment center aligned">
+
+          <div class="ui inverted statistic">
+            <div class="value">
+              91,4%
+            </div>
+            <div class="label">
+              Recall
+            </div>
+          </div>
+        </div>
+        <div class="ui inverted blue tertiary segment center aligned">
+          <div id="sparkline3">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="eight wide tablet four wide computer column">
+      <div class="ui horizontal segments">
+        <div class="ui inverted green segment center aligned">
+
+          <div class="ui inverted statistic">
+            <div class="value">
+              89,6%
+            </div>
+            <div class="label">
+              F-Measure
+            </div>
+          </div>
+        </div>
+        <div class="ui inverted green tertiary segment center aligned">
+          <div id="sparkline4">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="doubling two column row">
+    <div class="column">
+      <div class="ui segment">
+        <h4 class="ui header">Sentiment Result</h4>
+        <canvas id="bar" class="chart chart-bar"
+          chart-data="data" chart-labels="labels"> chart-series="series"
+        </canvas>
+      </div>
+    </div>
+    <div class="column">
+      <div class="ui segment">
+        <h4 class="ui header">Opinion Words</h4>
+        <div class="ui horizontal statistics">
+          <div class="blue statistic">
+            <div class="value">
+              2,204
+            </div>
+            <div class="label">
+              Positive
+            </div>
+          </div>
+          <div class="red statistic">
+            <div class="value">
+              3,322
+            </div>
+            <div class="label">
+              Negative
+            </div>
+          </div>
+          <div class="brown statistic">
+            <div class="value">
+              22
+            </div>
+            <div class="label">
+              Negation
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

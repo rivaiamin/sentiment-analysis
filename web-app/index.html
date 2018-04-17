@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="sentimanApp">
 <head>
     <!-- Standard Meta -->
     <meta charset="utf-8" />
@@ -13,14 +13,14 @@
     <title>Dashboard | Golgi Admin</title>
     <meta name="description" content="Golgi Admin Theme" />
     <meta name="keywords" content="html5, ,semantic,ui, library, framework, javascript,jquery,admin,theme" />
-    <link href="plugins/chartist/chartist.css" rel="stylesheet" />
-    <link href="plugins/datepicker/css/bootstrap-datepicker3.css" rel="stylesheet" />
-    <link href="dist/semantic.min.css" rel="stylesheet" />
-    <link href="css/main.min.css" rel="stylesheet" />
-    <link href="plugins/pacejs/pace.css" rel="stylesheet" />
-    <script src="js/jquery-2.1.4.min.js"></script>
+    <!-- <link href="plugins/chartist/chartist.css" rel="stylesheet" /> -->
+    <!-- <link href="plugins/datepicker/css/bootstrap-datepicker3.css" rel="stylesheet" /> -->
+    <link href="bower_components/semantic/dist/semantic.min.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <base href="/index.html">
+    <!-- <link href="plugins/pacejs/pace.css" rel="stylesheet" /> -->
 </head>
-<body class="admin">
+<body class="admin" ng-controller="sentimanCtrl">
     <!--sidebar mobile-->
     <div class="ui vertical push sidebar menu  thin" id="toc">
     </div>
@@ -43,10 +43,12 @@
                 <!--Load Navbar Menu In App.js loadhtml function-->
                 <!--Begin Container-->
                 <div class="containerli">
-                    
-                    <div class="footer">
-                        Build With <i class="heart icon red"></i> Semantic-Ui
+                    <div ui-view>
+
                     </div>
+                    <!-- <div class="footer">
+                        Build With <i class="heart icon red"></i> Semantic-Ui
+                    </div> -->
                 </div>
                 <!--Finish Container-->
                 <!--Load Footer Menu In App.js loadhtml function-->
@@ -55,14 +57,32 @@
             </div>
         </div>
     </div>
-    <script src='plugins/nicescrool/jquery.nicescroll.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.1/raphael.min.js"></script>
-    <script src="plugins/datepicker/js/bootstrap-datepicker.js"></script>
-    <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
-    <script src="dist/semantic.min.js"></script>
-    <script data-pace-options='{ "ajax": false }' src="plugins/pacejs/pace.js"></script>
-    <script src="plugins/morris/morris.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/semantic/dist/semantic.min.js"></script>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.min.js"></script>
+
+    <script src="assets/js/app.config.js"></script>
+    <script src="assets/js/controllers/sentiman.js"></script>
+    <script src="assets/js/controllers/dashboard.js"></script>
+    <script src="assets/js/controllers/sentiment.js"></script>
+    <script src="assets/js/controllers/preprocessing.js"></script>
+    <script src="assets/js/controllers/check.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script src='bower_components/jquery.nicescroll/jquery.nicescroll.min.js'></script>
+    <script src='bower_components/jquery.nicescroll/jquery.nicescroll.iframehelper.min.js'></script>
+    <script data-pace-options='{ "ajax": false }' src="bower_components/PACE/pace.min.js"></script>
+    <script src="bower_components/sparkline/jquery.sparkline.min.js"></script>
+    <script src="bower_components/chart.js/dist/Chart.min.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+    <!-- <script src="bower_components/morris.js/morris.min.js"></script> -->
+    <!-- <script src="bower_components/raphael/raphael.min.js"></script> -->
+    <!-- <script src="plugins/datepicker/js/bootstrap-datepicker.js"></script> -->
     <!-- <script src="js/customjs/custom-dashboard.js"></script> -->
-    <script src="js/app.min.js"></script>
+    <script src="assets/js/custom.js"></script>
 </body>
 </html>
