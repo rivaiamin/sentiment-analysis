@@ -26,3 +26,11 @@ Supervised Learning for training model
 3. Evaluation
   - Accuration
   - F-Measure
+
+  ## Directory
+  1. `docs`: Experiment Result Directory
+  2. `opennlp`: OpenNLP Tools
+  3. `opennlp-solr-plugin`: Java MVN OpenNLP and Solr Library
+  4. `php-api`: Web service for system test
+  5. `scripts`: preprocessing script
+  6. `web-app`: Web App for test
