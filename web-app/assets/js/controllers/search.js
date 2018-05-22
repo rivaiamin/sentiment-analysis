@@ -1,4 +1,4 @@
-var sentimentCtrl = function($http, $scope, $rootScope, $timeout) {
+var searchCtrl = function($http, $scope, $rootScope, $timeout) {
   $scope.rows = 20;
   $scope.start = 0;
   $scope.docs = [];
@@ -31,7 +31,7 @@ var sentimentCtrl = function($http, $scope, $rootScope, $timeout) {
     keyword = $scope.keyword;
 
     params.q = 'sentiment:'+sentiment;
-    if (keyword != undefined) params.q += ' AND full_text:'+'"%'+keyword+'%"';
+    if (keyword != undefined) params.q += ' AND text:'+'"%'+keyword+'%"';
 
     $http.get("http://localhost:8983/solr/sentiment/select", {
       params: params

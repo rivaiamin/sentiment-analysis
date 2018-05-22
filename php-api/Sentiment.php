@@ -31,4 +31,8 @@ class Sentiment {
 
     }
 
+    public function crawl() {
+        //$query = 'twurl "/1.1/tweets/search/'.$sandbox.'/dev.json?query='.$keyword.'&fromDate='.$from.'&toDate='.$to.$n.'"';
+    }
+
 }

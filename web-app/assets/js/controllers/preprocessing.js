@@ -5,8 +5,8 @@ var preprocessingCtrl = function($http, $scope, $rootScope, $timeout) {
     $scope.onLoad = true;
     params = {
       "_": '1522816500417',
-      "analysis.fieldname": "full_text",
-      "analysis.fieldvalue": $scope.full_text,
+      "analysis.fieldname": "text",
+      "analysis.fieldvalue": $scope.text,
       "analysis.showmatch": true,
       "verbose_output":1,
       "wt":"json"
@@ -15,7 +15,7 @@ var preprocessingCtrl = function($http, $scope, $rootScope, $timeout) {
     $http.get("http://localhost:8983/solr/sentiment/analysis/field", {
       params: params
     }).then(function (response) {
-      result = response.data.analysis.field_names.full_text.index;
+      result = response.data.analysis.field_names.text.index;
       $scope.results = [];
       for (i=0; i<result[1].length; i++) {
         $scope.results[i] = {

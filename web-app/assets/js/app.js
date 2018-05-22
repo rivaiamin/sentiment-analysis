@@ -1,9 +1,10 @@
-app = angular.module('sentimanApp', ['ui.router','infinite-scroll', 'chart.js']);
+app = angular.module('sentimanApp', ['ui.router','infinite-scroll', 'chart.js', 'ngFileUpload']);
 
 app
 .config(config)
 .controller('sentimanCtrl', sentimanCtrl)
 .controller('dashboardCtrl', dashboardCtrl)
-.controller('sentimentCtrl', sentimentCtrl)
+.controller('updateCtrl', updateCtrl)
+.controller('searchCtrl', searchCtrl)
 .controller('preprocessingCtrl', preprocessingCtrl)
 .controller('checkCtrl', checkCtrl)

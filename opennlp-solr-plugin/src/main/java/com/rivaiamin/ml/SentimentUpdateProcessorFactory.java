@@ -70,7 +70,7 @@ class SentimentUpdateProcessor extends UpdateRequestProcessor {
         //Instantiating the DocumentCategorizerME class
         DocumentCategorizerME myCategorizer = new DocumentCategorizerME(saModel);
 
-        Object content = doc.getFieldValue("full_text");
+        Object content = doc.getFieldValue("text");
         if( content != null ) { 
             // detect tokens in the paragraph
             String tokens[] = tokenizer.tokenize( String.valueOf(content));

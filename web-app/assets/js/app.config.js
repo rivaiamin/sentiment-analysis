@@ -3,10 +3,14 @@ var config = function($stateProvider, $qProvider,  $urlRouterProvider, $location
 		url:'/',
 		templateUrl: '/views/dashboard.html',
 		controller: 'dashboardCtrl',
-	}).state('sentiment', {
-		url:'/sentiment',
-		templateUrl: '/views/sentiment.html',
-		controller: 'sentimentCtrl',
+	}).state('update', {
+		url:'/update',
+		templateUrl: '/views/update.html',
+		controller: 'updateCtrl',
+	}).state('search', {
+		url:'/search',
+		templateUrl: '/views/search.html',
+		controller: 'searchCtrl',
 	}).state('preprocessing', {
 		url:'/preprocessing',
 		templateUrl: '/views/preprocessing.html',
